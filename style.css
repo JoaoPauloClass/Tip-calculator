@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+*{
+    font-family: "Space Mono", monospace;
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    gap: 10px;
+}
+
+.left-main p{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    margin: 5px;
+}
+
+.left-main{
+    width: 50%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-main{
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bill-input-text, .people-input-text{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.bill-input input, .number-people input{
+    width: 90%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: right;
+}
+
+.bill-input-div svg, .number-people-input-div svg{
+    position: relative;
+    right: 87%;
+}
+
+.bill-select-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.tip-percent{
+    width: 110px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.tip-percent-selected{
+    transition: 200ms;
+    background-color: hsl(173, 63%, 79%);
+    color: hsl(183, 100%, 15%);
+}
+
+#tip-percent-custom{
+    width: 110px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    font-weight: bold;
+    text-align: right;
+}
+
+#tip-percent-custom::placeholder{
+    text-align: center;
+}
+
+
+#bill-input-element{
+    outline: none;
+}
+
+#bill-input-element:focus, #number-people-input-element:focus, #tip-percent-custom:focus{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.tip-amount, .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-amount-text, .total-text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 700;
+}
+
+.right-main small{
+    font-weight: bold;
+    color: hsl(186, 14%, 43%);
+}
+
+#total-bill, #tip-amount{
+    color: hsl(172, 67%, 45%);
+    font-size: 48px;
+    text-align: center;
+}
+
+#reset-button{
+    margin-top: 125px;
+    border: none;
+    background-color: hsl(172, 67%, 45%);
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    padding: 10px 5px;
+}
+
+#reset-button:hover{
+    transition: 200ms;
+    background-color: hsl(171, 85%, 65%)
+}
+
+.error-message.red-text{
+    color: hsl(0, 61%, 64%);
+}
+
+@media screen and (max-width: 800px){
+
+body{
+    height: 1000px;
+    justify-content: end;
+    align-items: end;
+}
+
+main{
+    margin: 0;
+    width: 100%;
+    padding: 35px 0px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 20px 20px 0 0;
+}
+
+.left-main{
+    width: 90%;
+    align-items: center;
+    gap: 50px;
+}
+
+.bill-input{
+    width: 100%;
+}
+
+.bill-select-inputs{
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.tip-percent{
+    width: 150px;
+}
+
+#tip-percent-custom{
+    width: 150px;
+}
+
+
+.right-main{
+    width: calc(90% - 70px);
+}
+
+#reset-button{
+    margin-top: 30px;
+}
+
+.error-message.red-text{
+    font-size: 14px;
+}
+
+}
